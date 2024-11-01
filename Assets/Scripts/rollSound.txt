@@ -1,0 +1,37 @@
+using UnityEngine;
+
+public class BallRollingSound : MonoBehaviour
+{
+    public AudioClip rollingSound;
+    private AudioSource audioSource;
+    private bool isRolling = false;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = rollingSound;
+        audioSource.loop = true; // Loop the rolling sound
+        audioSource.volume = 0.5f; // Set the volume of the rolling sound
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("WoodenGround"))
+        {
+            if (!isRolling)
+            {
+                audioSource.Play();
+                isRolling = true;
+            }
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("WoodenGround"))
+        {
+            audioSource.Stop();
+            isRolling = false;
+        }
+    }
+}
