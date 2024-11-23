@@ -7,7 +7,7 @@ public class BallRollingSound : MonoBehaviour
     private bool isRolling = false;
     private bool hasPlayed = false; 
     private Rigidbody rb;
-    public float rollingThreshold = 0.3f; 
+    public float rollingThreshold; 
 
     // private int i; 
 
@@ -17,7 +17,7 @@ public class BallRollingSound : MonoBehaviour
         // i = 3; 
         audioSource.clip = rollingSound;
         audioSource.loop = true; 
-        audioSource.volume = 0.3f; 
+        audioSource.volume = 0.5f; 
         rb = GetComponent<Rigidbody>();
     }
     
@@ -25,7 +25,7 @@ public class BallRollingSound : MonoBehaviour
     {
         if (isRolling)
         {
-            audioSource.pitch = rb.linearVelocity.magnitude / 50;
+            audioSource.pitch = rb.linearVelocity.magnitude / 5;
         }
     }
 

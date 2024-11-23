@@ -103,7 +103,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9056b1380d90a1b48a2ec35e05fc3142, type: 2}
+  - {fileID: 2100000, guid: 8c61749fd989d1d4aac3ac8eba4df097, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,9 +133,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9143918798747489182}
   serializedVersion: 4
-  m_Mass: 20
-  m_Drag: 0
-  m_AngularDrag: 1
+  m_Mass: 100
+  m_Drag: 0.01
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rollingSound: {fileID: 8300000, guid: 316b2ebdb7c0d0645bc2bdabf5658c3f, type: 3}
-  rollingThreshold: 0.1
+  rollingThreshold: 0.05
 --- !u!82 &4177669310015820861
 AudioSource:
   m_ObjectHideFlags: 0
