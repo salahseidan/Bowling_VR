@@ -5,17 +5,28 @@ public class BallRollingSound : MonoBehaviour
     public AudioClip rollingSound;
     private AudioSource audioSource;
     private bool isRolling = false;
-    private bool hasPlayed = false; // Flag to track if the sound has been played
+    private bool hasPlayed = false; 
     private Rigidbody rb;
-    public float rollingThreshold = 0.3f; // Adjust this value as needed
+    public float rollingThreshold = 0.3f; 
+
+    // private int i; 
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        // i = 3; 
         audioSource.clip = rollingSound;
-        audioSource.loop = true; // Loop the rolling sound
-        audioSource.volume = 0.3f; // Set the volume of the rolling sound
+        audioSource.loop = true; 
+        audioSource.volume = 0.3f; 
         rb = GetComponent<Rigidbody>();
+    }
+    
+    void Update ()
+    {
+        if (isRolling)
+        {
+            audioSource.pitch = rb.linearVelocity.magnitude / 50;
+        }
     }
 
     void OnCollisionStay(Collision collision)
@@ -28,7 +39,7 @@ public class BallRollingSound : MonoBehaviour
                 {
                     audioSource.Play();
                     isRolling = true;
-                    hasPlayed = true; // Set the flag to true once the sound is played
+                    hasPlayed = true; 
                 }
             }
             else
@@ -37,7 +48,7 @@ public class BallRollingSound : MonoBehaviour
                 {
                     audioSource.Stop();
                     isRolling = false;
-                    hasPlayed = false; // Reset the flag when the ball stops rolling
+                    hasPlayed = false; 
                 }
             }
         }
@@ -49,7 +60,7 @@ public class BallRollingSound : MonoBehaviour
         {
             audioSource.Stop();
             isRolling = false;
-            hasPlayed = false; // Reset the flag when the ball leaves the ground
+            hasPlayed = false; 
         }
     }
 }

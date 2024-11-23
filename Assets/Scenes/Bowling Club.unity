@@ -8997,10 +8997,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling_pin001 (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1608182055177415785, guid: 77a6f4ed228c55f40a515b91fc285dfe, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 6335111662366809109, guid: 742f3b3f7c0f5834f81e0f790f489fc1, type: 3}
     - target: {fileID: 5884762788916365066, guid: 77a6f4ed228c55f40a515b91fc285dfe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.9056
@@ -9041,14 +9037,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6249073898459740399, guid: 77a6f4ed228c55f40a515b91fc285dfe, type: 3}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893078294489502968, guid: 77a6f4ed228c55f40a515b91fc285dfe, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 6335111662366809109, guid: 742f3b3f7c0f5834f81e0f790f489fc1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
